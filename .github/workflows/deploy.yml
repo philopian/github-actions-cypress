@@ -7,13 +7,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: 🛎️ Checkout
         uses: actions/checkout@v3
-      - name: Install packages
+      - name: 📦 Install packages
         run: yarn install --frozen-lockfile
-      - name: Build 🔧
+      - name: 🔧 Build
         run: yarn build
-      - name: Deploy to GitHub Pages 🚀
+      - name:  🚀 Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
