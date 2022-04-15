@@ -9,15 +9,14 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-
       - name: Install packages
         run: yarn install --frozen-lockfile
-
       - name: yarn build 🔧
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: build
-          token: ${{ secrets.GH_REPO_TOKEN }}  
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_REPO_TOKEN }}
+          GH_REPO_TOKEN: ${{ secrets.GH_REPO_TOKEN }}  
