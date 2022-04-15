@@ -43,10 +43,22 @@
       outDir: "build",
     },
   })
-```
-
+  ```
+- deploy via your own computer
   ```shell
   $ yarn deploy
   ```
 
-
+- Configure Github Actions
+  - A personal access token is required to authenticate to GitHub 
+  - Go to [Create token here](https://github.com/settings/tokens ) > `Generate new token` > Confim password
+  - note: <repo_name> for github actions
+  - Check the repo section
+  - **DON'T FORGET TO COPY THE TOKEN**
+  - Create a `.env` file in your repo root
+    ```bash
+    GH_REPO_TOKEN="<YOUR_ACCESS_TOKEN>"
+    ```
+  - Go to your repo > Settings > Secrets > Actions > new secret
+    - name: GH_REPO_TOKEN
+    - value: <YOUR_ACCESS_TOKEN>
