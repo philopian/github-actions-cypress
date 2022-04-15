@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  cypress-run:
+  deploy:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout 🛎️
